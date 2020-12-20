@@ -1,4 +1,4 @@
-﻿/* ExitView.cs
+﻿/* BackView.cs
  * License: NCSA Open Source
  * Author: Merijn Hendriks
  */
@@ -7,14 +7,13 @@ using App.Core.System;
 
 namespace App.Core.Views
 {
-    public class ExitView : View
+    public class BackView : View
     {
-        public ExitView()
+        public BackView()
         {
-            Add("Terminanting app...");
             SystemManager.Get<ViewSystem>()
                          .Get<HelpView>()
-                         .Add("exit: terminates app");
+                         .Add("back: revert to previous view");
         }
     }
 }

@@ -20,12 +20,13 @@ namespace App
             // add commands
             var commands = SystemManager.Get<CommandSystem>();
             commands.Add<HelpCommand>();
-            commands.Add<ExitCommand>();
             commands.Add<BackCommand>();
+            commands.Add<ExitCommand>();
 
             // add views
             var views = SystemManager.Get<ViewSystem>();
             views.Add<HelpView>();
+            views.Add<BackView>();
             views.Add<ExitView>();
 
             // show help

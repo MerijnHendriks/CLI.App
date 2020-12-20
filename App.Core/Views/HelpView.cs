@@ -10,7 +10,6 @@ namespace App.Core.Views
         public HelpView()
         {
             Add("help: show this menu");
-            Add("back: revert to previous view");
         }
     }
 }
