@@ -7,6 +7,11 @@ namespace App.Core.Utils
     {
         private List<T1> list;
 
+        public int Count
+        {
+            get { return list.Count; }
+        }
+
         public TypeList()
         {
             list = new List<T1>();
@@ -35,31 +40,51 @@ namespace App.Core.Utils
             return default;
         }
 
-        public void Add<T2>() where T2 : T1, new()
+        public int IndexOf<T2>() where T2 : T1
         {
-            if (Get<T2>() != null)
+            for (int i = 0; i < list.Count; i++)
             {
-                return;
+                if (list[i].GetType() == typeof(T2))
+                {
+                    return i;
+                }
             }
 
-            list.Add(new T2());
+            return -1;
+        }
+
+        public bool Contains<T2>() where T2 : T1
+        {
+            return (Get<T2>() != null);
+        }
+
+        public void Insert<T2>(int index) where T2 : T1, new()
+        {
+            if (!Contains<T2>())
+            {
+                list.Insert(index, new T2());
+            }
+        }
+
+        public void Add<T2>() where T2 : T1, new()
+        {
+            if (!Contains<T2>())
+            {
+                list.Add(new T2());
+            }
         }
 
         public void Remove<T2>() where T2 : T1
         {
-            foreach (var item in list)
+            if (Contains<T2>())
             {
-                if (item.GetType() == typeof(T2))
-                {
-                    list.Remove(item);
-                    return;
-                }
+                list.RemoveAt(IndexOf<T2>());
             }
         }
 
-        public int Count()
+        public void RemoveAt(int index)
         {
-            return list.Count;
+            list.RemoveAt(index);
         }
 
         public void Clear()
