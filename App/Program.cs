@@ -25,7 +25,7 @@ namespace App
             commands.Get<HelpCommand>().Execute(null);
 
             // app loop
-            while (commands.Get<ExitCommand>().Executing)
+            while (!commands.Get<ExitCommand>().Executing)
             {
                 SystemManager.OnUpdate();
             }

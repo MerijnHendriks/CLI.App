@@ -15,7 +15,7 @@ namespace App.Core.Command
 
         public ExitCommand()
         {
-            Executing = true;
+            Executing = false;
             SystemManager.Get<CommandSystem>()
                          .Get<HelpCommand>()
                          .Add("exit: terminates app");
@@ -28,7 +28,7 @@ namespace App.Core.Command
 
         public void Execute(string[] args)
         {
-            Executing = false;
+            Executing = true;
             Console.WriteLine("Terminating app...");
         }
     }
