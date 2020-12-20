@@ -1,13 +1,13 @@
-﻿/* AView.cs
+﻿/* View.cs
  * License: NCSA Open Source
  * Author: Merijn Hendriks
  */
 
 using System;
 
-namespace App.Core.View
+namespace App.Core.Views
 {
-    public class AView
+    public class View
     {
         public string Text { get; private set; }
 

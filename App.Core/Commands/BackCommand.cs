@@ -1,23 +1,22 @@
-﻿/* HelpCommand.cs
+﻿/* BackCommand.cs
  * License: NCSA Open Source
  * Author: Merijn Hendriks
  */
 
 using App.Core.System;
-using App.Core.View;
 
-namespace App.Core.Command
+namespace App.Core.Commands
 {
-    public class HelpCommand : ICommand
+    public class BackCommand : ICommand
     {
         public bool IsMatch(string[] args)
         {
-            return args[0] == "help";
+            return args[0] == "back";
         }
 
         public void Execute(string[] args)
         {
-            SystemManager.Get<ViewSystem>().SetView<HelpView>();
+            SystemManager.Get<ViewSystem>().RevertView();
         }
     }
 }

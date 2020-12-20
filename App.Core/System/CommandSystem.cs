@@ -4,7 +4,7 @@
  */
 
 using System;
-using App.Core.Command;
+using App.Core.Commands;
 using App.Core.Utils;
 
 namespace App.Core.System

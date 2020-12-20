@@ -5,9 +5,9 @@
 
 using App.Core.System;
 
-namespace App.Core.View
+namespace App.Core.Views
 {
-    public class ExitView : AView
+    public class ExitView : View
     {
         public ExitView()
         {

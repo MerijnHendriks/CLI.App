@@ -3,9 +3,9 @@
  * Author: Merijn Hendriks
  */
 
-namespace App.Core.View
+namespace App.Core.Views
 {
-    public class HelpView : AView
+    public class HelpView : View
     {
         public HelpView()
         {

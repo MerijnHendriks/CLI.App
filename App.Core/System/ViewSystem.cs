@@ -6,21 +6,21 @@
 using System;
 using System.Collections.Generic;
 using App.Core.Utils;
-using App.Core.View;
+using App.Core.Views;
 
 namespace App.Core.System
 {
     public class ViewSystem : ISystem
     {
-        private TypeList<AView> list;
-        private Stack<AView> previous;
-        private AView current;
+        private TypeList<View> list;
+        private Stack<View> previous;
+        private View current;
 
         public ViewSystem()
         {
-            list = new TypeList<AView>();
-            previous = new Stack<AView>();
-            current = new AView();
+            list = new TypeList<View>();
+            previous = new Stack<View>();
+            current = new View();
         }
 
         public void OnUpdate()
@@ -28,23 +28,23 @@ namespace App.Core.System
             // required by ISystem
         }
 
-        public T Get<T>() where T : AView
+        public T Get<T>() where T : View
         {
             return list.Get<T>();
         }
 
-        public void Add<T>() where T : AView, new()
+        public void Add<T>() where T : View, new()
         {
             list.Add<T>();
         }
 
-        private void DrawView(AView view)
+        private void DrawView(View view)
         {
             Console.Clear();
             Console.Write(view.Text);
         }
 
-        public void SetView<T>() where T : AView
+        public void SetView<T>() where T : View
         {
             if (list.Contains<T>())
             {

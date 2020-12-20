@@ -3,7 +3,7 @@
  * Author: Merijn Hendriks
  */
 
-namespace App.Core.Command
+namespace App.Core.Commands
 {
     public interface ICommand
     {

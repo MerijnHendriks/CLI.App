@@ -4,9 +4,9 @@
  */
 
 using App.Core.System;
-using App.Core.View;
+using App.Core.Views;
 
-namespace App.Core.Command
+namespace App.Core.Commands
 {
     public class ExitCommand : ICommand
     {

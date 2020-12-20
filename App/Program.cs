@@ -4,8 +4,8 @@
  */
 
 using App.Core.System;
-using App.Core.Command;
-using App.Core.View;
+using App.Core.Commands;
+using App.Core.Views;
 
 namespace App
 {
