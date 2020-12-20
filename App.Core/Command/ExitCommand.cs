@@ -3,9 +3,8 @@
  * Author: Merijn Hendriks
  */
 
-using System;
 using App.Core.System;
-using App.Core.Utils;
+using App.Core.View;
 
 namespace App.Core.Command
 {
@@ -16,9 +15,6 @@ namespace App.Core.Command
         public ExitCommand()
         {
             Executing = false;
-            SystemManager.Get<CommandSystem>()
-                         .Get<HelpCommand>()
-                         .Add("exit: terminates app");
         }
 
         public bool IsMatch(string[] args)
@@ -28,8 +24,8 @@ namespace App.Core.Command
 
         public void Execute(string[] args)
         {
+            SystemManager.Get<ViewSystem>().SetView<ExitView>();
             Executing = true;
-            Console.WriteLine("Terminating app...");
         }
     }
 }

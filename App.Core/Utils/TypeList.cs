@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/* TypeList.cs
+ * License: NCSA Open Source
+ * Author: Merijn Hendriks
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 
 namespace App.Core.Utils

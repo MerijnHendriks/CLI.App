@@ -21,7 +21,6 @@ namespace App.Core.System
         public void OnUpdate()
         {
             var args = Console.ReadLine().ToLower().Split(' ');
-            SystemManager.Get<DisplaySystem>().ClearScreen();
 
             foreach (var item in list)
             {
