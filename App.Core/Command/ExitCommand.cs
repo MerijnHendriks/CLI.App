@@ -4,14 +4,18 @@
  */
 
 using System;
-using App.System;
+using App.Core.System;
+using App.Core.Utils;
 
-namespace App.Command
+namespace App.Core.Command
 {
     public class ExitCommand : ICommand
     {
+        public bool Executing { get; private set; }
+
         public ExitCommand()
         {
+            Executing = true;
             SystemManager.Get<CommandSystem>()
                          .Get<HelpCommand>()
                          .Add("exit: terminates app");
@@ -24,7 +28,7 @@ namespace App.Command
 
         public void Execute(string[] args)
         {
-            Program.executing = false;
+            Executing = false;
             Console.WriteLine("Terminating app...");
         }
     }

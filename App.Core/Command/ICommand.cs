@@ -3,11 +3,11 @@
  * Author: Merijn Hendriks
  */
 
-namespace App.Command
+namespace App.Core.Command
 {
     public interface ICommand
     {
-        public bool IsMatch(string[] args);
-        public void Execute(string[] args);
+        bool IsMatch(string[] args);
+        void Execute(string[] args);
     }
 }

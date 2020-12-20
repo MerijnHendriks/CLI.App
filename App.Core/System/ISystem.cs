@@ -3,10 +3,10 @@
  * Author: Merijn Hendriks
  */
 
-namespace App.System
+namespace App.Core.System
 {
     public interface ISystem
     {
-        public void OnUpdate();
+        void OnUpdate();
     }
 }

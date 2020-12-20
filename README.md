@@ -1,7 +1,6 @@
 # CLI.App
 
-Generic .NET CLI app code.  
-A selfsigned certificate generator is implemented for demonstration purposes.  
+Generic .NET CLI app template.  
 Read the source code for implementation details.
 
 ## Requirements

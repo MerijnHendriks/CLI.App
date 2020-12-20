@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace App.Utils
+namespace App.Core.Utils
 {
     public class TypeList<T1> : IEnumerable<T1>
     {
-        List<T1> list;
+        private List<T1> list;
 
         public TypeList()
         {
@@ -32,7 +32,7 @@ namespace App.Utils
                 }
             }
 
-            return default(T2);
+            return default;
         }
 
         public void Add<T2>() where T2 : T1, new()

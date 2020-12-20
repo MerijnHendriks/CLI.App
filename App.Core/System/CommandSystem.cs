@@ -4,14 +4,14 @@
  */
 
 using System;
-using App.Command;
-using App.Utils;
+using App.Core.Command;
+using App.Core.Utils;
 
-namespace App.System
+namespace App.Core.System
 {
     public class CommandSystem : ISystem
     {
-        TypeList<ICommand> list;
+        private TypeList<ICommand> list;
 
         public CommandSystem()
         {

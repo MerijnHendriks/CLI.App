@@ -6,11 +6,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace App.Command
+namespace App.Core.Command
 {
     public class HelpCommand : ICommand
     {
-        List<string> text;
+        private List<string> text;
 
         public HelpCommand()
         {

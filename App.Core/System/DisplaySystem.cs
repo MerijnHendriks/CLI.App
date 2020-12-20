@@ -5,7 +5,7 @@
 
 using System;
 
-namespace App.System
+namespace App.Core.System
 {
     public class DisplaySystem : ISystem
     {

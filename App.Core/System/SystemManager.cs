@@ -3,9 +3,9 @@
  * Author: Merijn Hendriks
  */
 
-using App.Utils;
+using App.Core.Utils;
 
-namespace App.System
+namespace App.Core.System
 {
     public static class SystemManager
     {
